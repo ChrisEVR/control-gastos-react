@@ -13,7 +13,7 @@ const ListadoGastos = ({
         {
             filtro ? (
                 <>
-                    <h2>{gastosFiltrados.length ? 'Gastos' : 'No Hay Gastos En Esta Categoría'}</h2>
+                    <h2>{gastosFiltrados.length > 0 ? 'Gastos' : 'No Hay Gastos En Esta Categoría'}</h2>
 
                     {gastosFiltrados.map(gasto => (
                         <Gasto
@@ -27,7 +27,7 @@ const ListadoGastos = ({
                 
             ) : (
                 <>
-                    <h2>{gastos.length ? 'Gastos' : 'No Hay Gastos Aún'}</h2>
+                    <h2>{gastos.length > 0? 'Gastos' : 'No Hay Gastos Aún'}</h2>
 
                     {gastos.map(gasto => (
                         <Gasto
